@@ -15,9 +15,14 @@
     };
 
     ghostty.url = "github:ghostty-org/ghostty";
+
+    waybar = {
+      url = "github:Alexays/Waybar";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, ghostty, ... }@inputs: 
+  outputs = { nixpkgs, home-manager, hyprland, ghostty, waybar, ... }@inputs: 
     let
       user = "yuhshi";
       system = "x86_64-linux";
