@@ -9,7 +9,6 @@
     brightnessctl
     curl
     dconf
-    dunst
     eog
     fastfetch
     firefox

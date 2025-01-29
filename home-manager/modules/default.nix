@@ -1,5 +1,6 @@
 {
   imports = [
+    ./dunst
     ./ghostty.nix
     ./git.nix
     ./hyprland

@@ -38,6 +38,7 @@ in
   services.libinput.enable = true;
 
   environment.systemPackages = with pkgs; [
+    libnotify
 	  shadow
   ];
 
