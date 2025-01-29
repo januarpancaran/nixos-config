@@ -5,6 +5,7 @@
     ./ghostty.nix
     ./git.nix
     ./hyprland
+    ./nvim
     ./rofi.nix
     ./starship.nix
     ./waybar

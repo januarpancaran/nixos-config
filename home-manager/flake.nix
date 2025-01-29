@@ -20,9 +20,11 @@
       url = "github:Alexays/Waybar";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, ghostty, waybar, ... }@inputs: 
+  outputs = { nixpkgs, home-manager, hyprland, ghostty, waybar, neovim-nightly, ... }@inputs: 
     let
       user = "yuhshi";
       system = "x86_64-linux";

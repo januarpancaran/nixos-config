@@ -17,7 +17,6 @@
     jq
     killall
     nautilus
-    neovim
     networkmanagerapplet
     obs-studio
     papirus-icon-theme
@@ -34,6 +33,7 @@
     wget
     wl-clipboard
     xwaylandvideobridge
+    yazi
     zoxide
   ];
 
