@@ -10,7 +10,6 @@
     curl
     dconf
     eog
-    fastfetch
     firefox
     glib
     grim
