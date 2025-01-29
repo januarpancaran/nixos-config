@@ -22,9 +22,9 @@
     neovim
     networkmanagerapplet
     obs-studio
+    papirus-icon-theme
     playerctl
     polkit_gnome
-    rofi-wayland
     slurp
     spotify
     swww
