@@ -13,7 +13,6 @@
     eog
     fastfetch
     firefox
-    git
     glib
     grim
     htop
@@ -36,7 +35,6 @@
     webcord
     wget
     wl-clipboard
-    wlogout
     xwaylandvideobridge
     zoxide
   ];
