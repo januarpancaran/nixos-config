@@ -2,6 +2,7 @@
   imports = [
     ./dunst
     ./fastfetch.nix
+    ./firefox
     ./ghostty.nix
     ./git.nix
     ./hyprland

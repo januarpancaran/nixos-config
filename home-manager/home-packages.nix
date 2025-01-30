@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
@@ -11,7 +9,6 @@
     curl
     dconf
     eog
-    firefox
     fzf
     glib
     grim
@@ -29,13 +26,22 @@
     swww
     telegram-desktop
     unrar
-    unzip 
+    unzip
     webcord
     wget
     wl-clipboard
     xwaylandvideobridge
     yazi
     zoxide
+
+    # Programming
+    cargo
+    clang
+    go
+    nodejs
+    openjdk23
+    python314
+    rustc
   ];
 
   programs.mpv = {

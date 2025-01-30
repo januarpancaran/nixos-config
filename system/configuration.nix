@@ -1,19 +1,21 @@
-{ config, lib, pkgs, ... }:
-let
-  host = "nixos-daangsangu";
-in 
 {
-  imports =
-    [ 
-      ./hardware-configuration.nix
-      ./modules
-    ];
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
+  host = "nixos-daangsangu";
+in {
+  imports = [
+    ./hardware-configuration.nix
+    ./modules
+  ];
 
   networking.hostName = host;
   networking.networkmanager = {
     enable = true;
     wifi.powersave = true;
-  }; 
+  };
 
   time.timeZone = "Asia/Jakarta";
 
@@ -25,7 +27,7 @@ in
   console = {
     font = "Lat2-Terminus16";
     keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
+    #   useXkbConfig = true; # use xkb.options in tty.
   };
 
   # services.xserver.enable = true;
@@ -65,7 +67,5 @@ in
   # accidentally delete configuration.nix.
   # system.copySystemConfiguration = true;
 
-  system.stateVersion = "24.11"; 
-
+  system.stateVersion = "24.11";
 }
-
