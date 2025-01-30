@@ -33,7 +33,7 @@ null_ls.setup({
     null_ls.builtins.diagnostics.markdownlint_cli2,
 
     -- Golang
-    null_ls.builtins.formatting.asfmt,
+    null_ls.builtins.formatting.asmfmt,
     null_ls.builtins.diagnostics.golangci_lint,
     null_ls.builtins.formatting.golines,
     null_ls.builtins.formatting.gofumpt,
