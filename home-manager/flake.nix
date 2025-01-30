@@ -22,6 +22,12 @@
     };
 
     neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
+
+    # Zsh plugins
+    zsh-fzf-tab = {
+      url = "github:Aloxaf/fzf-tab";
+      flake = false;
+    };
   };
 
   outputs = { nixpkgs, home-manager, hyprland, ghostty, waybar, neovim-nightly, ... }@inputs: 

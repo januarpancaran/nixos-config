@@ -2,14 +2,14 @@
 
 {
 	programs.hyprlock = {
-		enable = true;
 		package = pkgs.hyprlock;
+		enable = true;
 
 		settings = {
 			background = [{
 				color = "rgba(000000FF)";
 			}];
-      
+
 			input-field = [
 				{
 					monitor = "";
@@ -40,6 +40,7 @@
   					halign = "center";
   					valign = "center";
 				}
+
 				# Greeting
 				{
 					monitor = "";
@@ -53,6 +54,7 @@
   					halign = "center";
   					valign = "center";
 				}
+
 				# Lock Icon
 				{
 					monitor = "";
@@ -66,6 +68,7 @@
   					halign = "center";
   					valign = "bottom";
 				}
+
 				# Locked Text
 				{
 					monitor = "";

@@ -2,8 +2,8 @@
 
 {
   services.hypridle = {
-    enable = true;
     package = pkgs.hypridle;
+    enable = true;
 
     settings = {
       general = {

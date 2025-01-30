@@ -11,4 +11,6 @@
     ELECTRON_OZONE_PLATFORM_THEME = "wayland";
     NIXOS_OZONE_WL = 1;
   };
+
+  environment.pathsToLink = [ "/share/zsh" ];
 }

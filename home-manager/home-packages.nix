@@ -11,6 +11,7 @@
     dconf
     eog
     firefox
+    fzf
     glib
     grim
     htop
@@ -26,7 +27,6 @@
     spotify
     swww
     telegram-desktop
-    trash-cli
     unrar
     unzip 
     webcord

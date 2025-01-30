@@ -7,9 +7,10 @@
     ./hyprland
     ./nvim
     ./rofi.nix
-    ./starship.nix
+    ./starship
     ./theme.nix
     ./waybar
     ./wlogout
+    ./zsh.nix
   ];
 }
