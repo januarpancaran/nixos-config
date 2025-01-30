@@ -21,6 +21,7 @@
       };
     in
       builtins.listToAttrs [
+        (extension "catppuccin-mocha-mauve-git" "{76aabc99-c1a8-4c1e-832b-d4f2941d5a7a}")
         (extension "ublock-origin" "uBlock0@raymondhill.net")
       ];
 
