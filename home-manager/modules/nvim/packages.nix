@@ -55,7 +55,7 @@
     black
     isort
     
-    # Nixos
+    # Nix
     alejandra
     statix
     

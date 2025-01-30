@@ -85,5 +85,8 @@
         plugin = nvim-treesitter.withAllGrammars;
         config = toLua ./lua/plugins/treesitter.lua;
       }
+
+      # Trouble 
+      trouble-nvim
     ];
 }

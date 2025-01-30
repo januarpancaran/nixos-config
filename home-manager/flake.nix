@@ -21,6 +21,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Neovim
     neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
 
     # Zsh plugins
