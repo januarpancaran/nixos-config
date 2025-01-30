@@ -9,6 +9,7 @@
     ./rofi.nix
     ./starship
     ./theme.nix
+    ./tmux.nix
     ./waybar
     ./wlogout
     ./zsh.nix
