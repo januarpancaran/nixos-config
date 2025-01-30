@@ -8,6 +8,7 @@
     ./nvim
     ./rofi.nix
     ./starship.nix
+    ./theme.nix
     ./waybar
     ./wlogout
   ];
