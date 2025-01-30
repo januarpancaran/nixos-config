@@ -33,7 +33,7 @@
 
     shellAliases = {
       ls = "ls -a --color=yes";
-      ll = "ll -a --color=yes";
+      ll = "ls -l --color=yes";
       svim = "sudo nvim";
       nfzf = "nvim $(fzf -m --preview='bat --color=always {}')";
       cat = "bat";
