@@ -198,11 +198,11 @@
 
       # Brightness and Volume
       bindel = [
-        ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
-        ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ", XF86MonBrightnessUp, exec, brightnessctl s 5%+"
-        ", XF86MonBrightnessDown, exec, brightnessctl s 5%-"
+        ", XF86AudioRaiseVolume, exec, ~/.local/bin/volumenotify up"
+        ", XF86AudioLowerVolume, exec, ~/.local/bin/volumenotify down" 
+        ", XF86AudioMute, exec, ~/.local/bin/volumenotify mute"
+        ", XF86MonBrightnessUp, exec, ~/.local/bin/brightnessnotify up" 
+        ", XF86MonBrightnessDown, exec, ~/.local/bin/brightnessnotify down" 
       ];
 
       # Playerctl

@@ -10,6 +10,7 @@
     ./nixSettings.nix
     ./sound.nix
     ./systemdServices.nix
+    ./udevRules.nix
     ./user.nix
     ./zram.nix
   ];

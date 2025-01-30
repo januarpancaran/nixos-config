@@ -4,6 +4,7 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+    acpi
     bat
     blueberry
     brightnessctl

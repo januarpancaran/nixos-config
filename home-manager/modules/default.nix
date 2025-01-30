@@ -5,9 +5,12 @@
     ./ghostty.nix
     ./git.nix
     ./hyprland
+    ./notifyScripts
     ./nvim
     ./rofi.nix
     ./starship
+    ./systemdServices.nix
+    ./systemdTimers.nix
     ./theme.nix
     ./tmux.nix
     ./waybar
