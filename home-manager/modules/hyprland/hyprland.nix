@@ -21,6 +21,7 @@
         "dunst"
         "swww-daemon"
         "hypridle"
+        "xwaylandvideobridge"
         "systemctl start --user polkit-gnome-authentication-agent-1.service"
       ];
 
