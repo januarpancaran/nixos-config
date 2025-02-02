@@ -1,6 +1,8 @@
-{ pkgs, inputs, ... }:
-
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   wayland.windowManager.hyprland = {
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     enable = true;
@@ -21,7 +23,7 @@
         "hypridle"
         "systemctl start --user polkit-gnome-authentication-agent-1.service"
       ];
-      
+
       env = [
         "XCURSOR_SIZE, 24"
         "HYPRCURSOR_SIZE, 24"
@@ -145,50 +147,51 @@
       "$mainMod" = "SUPER";
       "$monitor" = "$(hyprctl monitors | grep 'Monitor' | awk '{print $2}')";
 
-      bind = [
-        # Shortcuts
-        "$mainMod, T, exec, $terminal"
-        "$mainMod, Q, killactive"
-        "$mainMod, M, exit"
-        "$mainMod, E, exec, $fileManager"
-        "$mainMod, V, togglefloating"
-        "$mainMod, R, exec, $menu -show drun"
-        "Alt, Tab, exec, $menu -show window"
-        "$mainMod, P, pseudo"
-        "$mainMod, J, togglesplit"
-        "$mainMod, B, exec, $browser"
-        "$mainMod, I, exec, $browser --private-window"
-        "$mainMod, C, exec, code"
-        "$mainMod, L, exec, spotify"
-        "$mainMod, D, exec, webcord"
-        "$mainMod, O, exec, obs"
-        "$mainMod SHIFT, S, exec, grim -g '$(slurp)' ~/Pictures/Screenshots/Screenshot_$(date+'%Y%m%d_%H%M%S').png"
-        "$mainMod, Print, exec, grim -o $monitor ~/Pictures/Screenshots/Screenshot_$(date+'%Y%m%d_%H%M%S').png"
-        ", Print, exec, grim -o $monitor - | wl-copy"
+      bind =
+        [
+          # Shortcuts
+          "$mainMod, T, exec, $terminal"
+          "$mainMod, Q, killactive"
+          "$mainMod, M, exit"
+          "$mainMod, E, exec, $fileManager"
+          "$mainMod, V, togglefloating"
+          "$mainMod, R, exec, $menu -show drun"
+          "Alt, Tab, exec, $menu -show window"
+          "$mainMod, P, pseudo"
+          "$mainMod, J, togglesplit"
+          "$mainMod, B, exec, $browser"
+          "$mainMod, I, exec, $browser --private-window"
+          "$mainMod, C, exec, code"
+          "$mainMod, L, exec, spotify"
+          "$mainMod, D, exec, webcord"
+          "$mainMod, O, exec, obs"
+          "$mainMod SHIFT, S, exec, grim -g '$(slurp)' ~/Pictures/Screenshots/Screenshot_$(date+'%Y%m%d_%H%M%S').png"
+          "$mainMod, Print, exec, grim -o $monitor ~/Pictures/Screenshots/Screenshot_$(date+'%Y%m%d_%H%M%S').png"
+          ", Print, exec, grim -o $monitor - | wl-copy"
 
-        # Move Focus
-        "$mainMod, left, movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up, movefocus, u"
-        "$mainMod, down, movefocus, d"
+          # Move Focus
+          "$mainMod, left, movefocus, l"
+          "$mainMod, right, movefocus, r"
+          "$mainMod, up, movefocus, u"
+          "$mainMod, down, movefocus, d"
 
-        # Special Workspaces
-        "$mainMod, S, togglespecialworkspace, magic"
-        "$mainMod SHIFT, S, movetoworkspace, special:magic"
+          # Special Workspaces
+          "$mainMod, S, togglespecialworkspace, magic"
+          "$mainMod SHIFT, S, movetoworkspace, special:magic"
 
-        # Scroll Workspaces
-        "$mainMod, mouse_down, workspace, e+1"
-        "$mainMod, mouse_up, workspace, e-1"
-      ] ++ (
+          # Scroll Workspaces
+          "$mainMod, mouse_down, workspace, e+1"
+          "$mainMod, mouse_up, workspace, e-1"
+        ]
+        ++ (
           # Workspaces
-          builtins.concatLists (builtins.genList (i:
-          let
-            ws = i + 1;
-          in [
+          builtins.concatLists (builtins.genList (i: let
+              ws = i + 1;
+            in [
               "$mainMod, code:1${toString i}, workspace, ${toString ws}"
               "$mainMod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
             ])
-          10)
+            10)
         );
 
       bindm = [
@@ -199,10 +202,10 @@
       # Brightness and Volume
       bindel = [
         ", XF86AudioRaiseVolume, exec, ~/.local/bin/volumenotify up"
-        ", XF86AudioLowerVolume, exec, ~/.local/bin/volumenotify down" 
+        ", XF86AudioLowerVolume, exec, ~/.local/bin/volumenotify down"
         ", XF86AudioMute, exec, ~/.local/bin/volumenotify mute"
-        ", XF86MonBrightnessUp, exec, ~/.local/bin/brightnessnotify up" 
-        ", XF86MonBrightnessDown, exec, ~/.local/bin/brightnessnotify down" 
+        ", XF86MonBrightnessUp, exec, ~/.local/bin/brightnessnotify up"
+        ", XF86MonBrightnessDown, exec, ~/.local/bin/brightnessnotify down"
       ];
 
       # Playerctl
@@ -216,6 +219,12 @@
       windowrulev2 = [
         "suppressevent maximize, class:.*"
         "nofocus, class:^$, title:^$, xwayland:1, floating:1, fullscreen:0, pinned:0"
+        "opacity 0.0 override, class:^(xwaylandvideobridge)$"
+        "noanim, class:^(xwaylandvideobridge)$"
+        "noinitialfocus, class:^(xwaylandvideobridge)$"
+        "maxsize 1 1, class:^(xwaylandvideobridge)$"
+        "noblur, class:^(xwaylandvideobridge)$"
+        "nofocus, class:^(xwaylandvideobridge)$"
       ];
     };
   };
