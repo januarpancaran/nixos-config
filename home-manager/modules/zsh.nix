@@ -39,6 +39,7 @@
       cat = "bat";
       grep = "grep --color=yes";
       rm = "trash-put";
+      develop = "nix develop --command zsh";
       ".." = "cd ..";
       "..." = "cd ../..";
       "...." = "cd ../../..";
