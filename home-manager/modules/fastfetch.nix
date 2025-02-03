@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   programs.fastfetch = {
     package = pkgs.fastfetch;
     enable = true;
@@ -43,10 +41,15 @@
         "wm"
         "uptime"
         {
+          type = "command";
+          key = "OS Age";
+          text = "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days";
+        }
+        {
           type = "colors";
           key = "Colors";
           block = {
-            range = [ 1 6 ];
+            range = [1 6];
           };
         }
       ];
