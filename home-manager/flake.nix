@@ -23,6 +23,10 @@
 
     # Neovim
     neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
+    none-ls-extras = {
+      url = "github:nvimtools/none-ls-extras.nvim";
+      flake = false;
+    };
 
     # Zsh plugins
     zsh-fzf-tab = {
@@ -31,20 +35,27 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, ghostty, waybar, neovim-nightly, ... }@inputs: 
-    let
-      user = "yuhshi";
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+  outputs = {
+    nixpkgs,
+    home-manager,
+    hyprland,
+    ghostty,
+    waybar,
+    neovim-nightly,
+    ...
+  } @ inputs: let
+    user = "yuhshi";
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
+  in {
+    homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
+      inherit pkgs;
 
-        modules = [
-          ./home.nix
-        ];
+      modules = [
+        ./home.nix
+      ];
 
-        extraSpecialArgs = { inherit inputs; };
-      };
+      extraSpecialArgs = {inherit inputs;};
     };
+  };
 }

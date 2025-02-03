@@ -1,0 +1,206 @@
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  programs.neovim.plugins = with pkgs.vimPlugins; let
+    read = file: "${builtins.readFile file}";
+  in [
+    {
+      plugin = alpha-nvim;
+      type = "lua";
+      config = ''
+        require("alpha").setup(require("alpha.themes.dashboard").config)
+      '';
+    }
+
+    {
+      plugin = comment-nvim;
+      type = "lua";
+      config = ''
+        require("Comment").setup()
+      '';
+    }
+
+    # Completions
+    {
+      plugin = nvim-cmp;
+      type = "lua";
+      config = read ../../after/plugin/completions.lua;
+    }
+    cmp-nvim-lsp
+    luasnip
+    cmp_luasnip
+    friendly-snippets
+
+    # Git
+    {
+      plugin = gitsigns-nvim;
+      type = "lua";
+      config = read ../../after/plugin/gitsigns.lua;
+    }
+
+    # Indent
+    {
+      plugin = indent-blankline-nvim;
+      type = "lua";
+      config = read ../../after/plugin/indent-blankline.lua;
+    }
+    {
+      plugin = rainbow-delimiters-nvim;
+      type = "lua";
+      config = read ../../after/plugin/rainbow-delimiters.lua;
+    }
+
+    # Lspconfig
+    {
+      plugin = nvim-lspconfig;
+      type = "lua";
+      config = read ../../after/plugin/lsp-config.lua;
+    }
+
+    # Lualine
+    {
+      plugin = lualine-nvim;
+      type = "lua";
+      config = ''
+        require("lualine").setup({
+          options = {
+            theme = "kanagawa",
+          }
+        })
+      '';
+    }
+    nvim-web-devicons
+
+    # Markdown Preview
+    {
+      plugin = markdown-preview-nvim;
+      type = "lua";
+      config = read ../../after/plugin/markdown-preview.lua;
+    }
+
+    # None ls
+    {
+      plugin = none-ls-nvim;
+      type = "lua";
+      config = read ../../after/plugin/none-ls.lua;
+    }
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "none-ls-extras-nvim";
+      src = inputs.none-ls-extras;
+      dependencies = [none-ls-nvim];
+    })
+
+    # Vim tmux navigator
+    {
+      plugin = vim-tmux-navigator;
+      type = "lua";
+      config = read ../../after/plugin/vim-tmux-navigator.lua;
+    }
+
+    # Telescope
+    {
+      plugin = telescope-nvim;
+      type = "lua";
+      config = read ../../after/plugin/telescope.lua;
+    }
+    telescope-ui-select-nvim
+    plenary-nvim
+
+    # Theme
+    {
+      plugin = kanagawa-nvim;
+      type = "lua";
+      config = ''
+        vim.cmd.colorscheme("kanagawa-wave")
+      '';
+    }
+
+    # Treesitter
+    {
+      plugin = nvim-treesitter.withAllGrammars;
+      type = "lua";
+      config = read ../../after/plugin/treesitter.lua;
+    }
+
+    # Trouble
+    {
+      plugin = trouble-nvim;
+      type = "lua";
+      config = read ../../after/plugin/trouble-nvim.lua;
+    }
+
+    # Undotree
+    {
+      plugin = undotree;
+      type = "lua";
+      config = ''
+        vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle)
+      '';
+    }
+  ];
+
+  programs.neovim.extraPackages = with pkgs; [
+    # Lsp
+    bash-language-server
+    clang-tools
+    vscode-langservers-extracted
+    eslint
+    gopls
+    jdt-language-server
+    lua-language-server
+    marksman
+    nil
+    pyright
+    rust-analyzer
+    sqls
+    svelte-language-server
+    tailwindcss-language-server
+    typescript-language-server
+    vue-language-server
+
+    # None ls
+    # Shell
+    shfmt
+
+    # Lua
+    stylua
+
+    # Javascript
+    eslint_d
+    jq
+    prettierd
+
+    # Css
+    stylelint
+
+    # Markdown
+    markdownlint-cli2
+
+    # Golang
+    go-tools
+    asmfmt
+    golangci-lint
+    golangci-lint-langserver
+    golines
+    gofumpt
+
+    # Cpp
+    cpplint
+    cppcheck
+
+    # Python
+    pylint
+    black
+    isort
+
+    # Nix
+    alejandra
+    statix
+
+    # Java
+    google-java-format
+    checkstyle
+  ];
+}

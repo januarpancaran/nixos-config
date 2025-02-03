@@ -20,14 +20,17 @@ null_ls.setup({
     null_ls.builtins.formatting.shfmt,
 
     -- Lua
-    null_ls.builtins.formatting.stylua,
     null_ls.builtins.completion.luasnip,
+    null_ls.builtins.formatting.stylua,
 
     -- Javascript
+    require("none-ls.diagnostics.eslint_d"),
+    require("none-ls.code_actions.eslint_d"),
+    require("none-ls.formatting.eslint_d"),
     null_ls.builtins.formatting.prettierd,
 
     -- Css
-    null_ls.builtins.formatting.stylelint,
+    null_ls.builtins.diagnostics.stylelint,
 
     -- Markdown
     null_ls.builtins.diagnostics.markdownlint_cli2,
@@ -40,18 +43,15 @@ null_ls.setup({
     null_ls.builtins.diagnostics.staticcheck,
 
     -- Cpp
-    null_ls.builtins.diagnostics.cppcheck,
+    require("none-ls.diagnostics.cpplint").with({
+      args = { "--filter=-whitespace,-legal/copyright" },
+    }),
     null_ls.builtins.formatting.clang_format,
 
     -- Python
     null_ls.builtins.diagnostics.pylint,
     null_ls.builtins.formatting.black,
     null_ls.builtins.formatting.isort,
-
-    -- Nix
-    null_ls.builtins.formatting.alejandra,
-    null_ls.builtins.diagnostics.statix,
-    null_ls.builtins.code_actions.statix,
 
     -- Java
     null_ls.builtins.formatting.google_java_format,

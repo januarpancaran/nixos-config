@@ -21,6 +21,7 @@
     papirus-icon-theme
     playerctl
     polkit_gnome
+    ripgrep
     slurp
     spotify
     swww
@@ -33,7 +34,6 @@
     xwaylandvideobridge
     yazi
     zoxide
-
     # Programming
     cargo
     clang
