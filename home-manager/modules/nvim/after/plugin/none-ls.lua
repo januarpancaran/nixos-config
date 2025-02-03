@@ -58,5 +58,9 @@ null_ls.setup({
     null_ls.builtins.diagnostics.checkstyle.with({
       extra_args = { "-c", "/google_checks.xml" },
     }),
+
+    -- Nix
+    null_ls.builtins.diagnostics.statix,
+    null_ls.builtins.formatting.alejandra,
   },
 })
