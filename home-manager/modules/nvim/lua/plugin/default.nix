@@ -151,7 +151,7 @@
     jdt-language-server
     lua-language-server
     marksman
-    nil
+    nixd
     pyright
     rust-analyzer
     sqls
@@ -197,7 +197,6 @@
 
     # Nix
     alejandra
-    statix
 
     # Java
     google-java-format
