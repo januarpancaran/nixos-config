@@ -42,6 +42,7 @@
     openjdk23
     python314
     rustc
+    typescript
   ];
 
   programs.mpv = {
