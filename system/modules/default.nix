@@ -3,11 +3,13 @@
     ./autoCpuFreq.nix
     ./bluetooth.nix
     ./boot.nix
+    ./docker.nix
     ./env.nix
     ./firmware.nix
     ./fonts.nix
     ./graphics.nix
     ./nixSettings.nix
+    ./ollama.nix
     ./sound.nix
     ./systemdServices.nix
     ./udevRules.nix

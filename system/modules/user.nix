@@ -1,12 +1,10 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   user = "yuhshi";
-in 
-{
+in {
   users = {
     users.${user} = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "video" "audio" "networkmanager" ];
+      extraGroups = ["wheel" "video" "audio" "networkmanager" "docker"];
     };
 
     defaultUserShell = pkgs.zsh;
