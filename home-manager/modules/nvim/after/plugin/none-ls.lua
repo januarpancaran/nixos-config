@@ -61,5 +61,8 @@ null_ls.setup({
 
     -- Nix
     null_ls.builtins.formatting.alejandra,
+
+    -- LaTex
+    null_ls.builtins.diagnostics.textidote,
   },
 })

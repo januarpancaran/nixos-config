@@ -145,7 +145,6 @@
     # Lsp
     bash-language-server
     clang-tools
-    vscode-langservers-extracted
     eslint
     gopls
     jdt-language-server
@@ -157,7 +156,9 @@
     sqls
     svelte-language-server
     tailwindcss-language-server
+    texlab
     typescript-language-server
+    vscode-langservers-extracted
     vue-language-server
 
     # None ls
@@ -201,5 +202,8 @@
     # Java
     google-java-format
     checkstyle
+
+    # LaTex
+    textidote
   ];
 }
