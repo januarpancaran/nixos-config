@@ -145,7 +145,7 @@
     # Lsp
     bash-language-server
     clang-tools
-    eslint
+    docker-compose-language-service
     gopls
     jdt-language-server
     lua-language-server
@@ -205,5 +205,8 @@
 
     # LaTex
     textidote
+
+    # Docker
+    hadolint
   ];
 }

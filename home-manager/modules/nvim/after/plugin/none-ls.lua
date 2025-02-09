@@ -64,5 +64,8 @@ null_ls.setup({
 
     -- LaTex
     null_ls.builtins.diagnostics.textidote,
+
+    -- Docker
+    null_ls.builtins.diagnostics.hadolint,
   },
 })
