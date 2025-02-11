@@ -1,8 +1,6 @@
-{ pkgs, inputs, ... }:
-
-{
+{pkgs, ...}: {
   programs.ghostty = {
-    package = inputs.ghostty.packages.${pkgs.system}.ghostty;
+    package = pkgs.ghostty;
     enable = true;
 
     settings = {

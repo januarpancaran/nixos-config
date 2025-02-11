@@ -9,18 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:hyprwm/hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    ghostty.url = "github:ghostty-org/ghostty";
-
-    waybar = {
-      url = "github:Alexays/Waybar";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Neovim
     neovim-nightly = {
       url = "github:nix-community/neovim-nightly-overlay";
@@ -41,10 +29,6 @@
   outputs = {
     nixpkgs,
     home-manager,
-    hyprland,
-    ghostty,
-    waybar,
-    neovim-nightly,
     ...
   } @ inputs: let
     user = "yuhshi";

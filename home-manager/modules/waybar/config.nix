@@ -1,8 +1,6 @@
-{ pkgs, inputs, ... }:
-
-{
+{pkgs, ...}: {
   programs.waybar = {
-    package = inputs.waybar.packages.${pkgs.system}.waybar;
+    package = pkgs.waybar;
     enable = true;
 
     settings = [
@@ -16,7 +14,7 @@
           "hyprland/window"
           "mpris"
         ];
-        modules-center = [ "clock" ];
+        modules-center = ["clock"];
         modules-right = [
           "pulseaudio"
           "bluetooth"
@@ -98,10 +96,10 @@
             "phone" = "";
             "portable" = "";
             "car" = "";
-            "default" = [ " " ];
+            "default" = [" "];
           };
           on-click = "pavucontrol";
-          min-length =  13;
+          min-length = 13;
           max-volume = 150;
         };
 
