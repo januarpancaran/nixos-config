@@ -9,7 +9,6 @@
     ./fonts.nix
     ./graphics.nix
     ./nixSettings.nix
-    ./ollama.nix
     ./sound.nix
     ./systemdServices.nix
     ./udevRules.nix
