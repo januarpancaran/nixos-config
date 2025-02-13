@@ -157,7 +157,7 @@
           "$mainMod, J, togglesplit"
           "$mainMod, B, exec, $browser"
           "$mainMod, I, exec, $browser --private-window"
-          "$mainMod, C, exec, code"
+          "$mainMod, C, exec, env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
           "$mainMod, L, exec, spotify"
           "$mainMod, D, exec, webcord"
           "$mainMod, O, exec, obs"

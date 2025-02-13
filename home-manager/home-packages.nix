@@ -11,6 +11,7 @@
     eog
     fzf
     glib
+    gnome-control-center
     grim
     htop
     jq
