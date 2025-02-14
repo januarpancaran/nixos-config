@@ -7,6 +7,10 @@ My NixOS and Home Manager configurations ft. Hyprland. This repo is my "nix vers
 ```bash
 # Make a folder in your home folder
 mkdir -p $HOME/.config/nixos # Or any other places that you want
+
+# Clone this repo
+git clone --depth 1 https://github.com/januarpancaran/nixos-config.git
+cd nixos-config
 cp -r {system,home-manager} $HOME/.config/nixos
 
 # Copy your hardware configuration
