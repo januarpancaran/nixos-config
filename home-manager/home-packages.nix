@@ -43,6 +43,7 @@
     openjdk23
     python314
     rustc
+    texliveBasic
     typescript
   ];
 
