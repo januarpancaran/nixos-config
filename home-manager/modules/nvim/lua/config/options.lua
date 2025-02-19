@@ -5,6 +5,7 @@ vim.o.signcolumn = "yes"
 
 -- scroll
 vim.o.scrolloff = 10
+vim.o.wrap = false
 
 -- tab
 vim.o.tabstop = 2
@@ -20,16 +21,22 @@ vim.o.autoindent = true
 vim.o.hlsearch = false
 vim.incsearch = true
 
--- others
-vim.o.updatetime = 300
-vim.o.termguicolors = true
+-- undo
 vim.o.swapfile = false
+vim.o.backup = false
+vim.o.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.o.undofile = true
+
+-- others
+vim.o.updatetime = 50
+vim.o.termguicolors = true
+vim.o.guicursor = ""
 vim.o.clipboard = "unnamedplus"
 
 vim.diagnostic.config({
-  virtual_text = true,
-  signs = true,
-  underline = true,
-  update_in_insert = true,
-  severity_sort = true,
+    virtual_text = true,
+    signs = true,
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
 })
