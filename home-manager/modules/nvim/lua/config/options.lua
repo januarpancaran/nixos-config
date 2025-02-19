@@ -5,7 +5,7 @@ vim.o.signcolumn = "yes"
 
 -- scroll
 vim.o.scrolloff = 10
-vim.o.wrap = false
+vim.o.wrap = true
 
 -- tab
 vim.o.tabstop = 2
@@ -34,9 +34,9 @@ vim.o.guicursor = ""
 vim.o.clipboard = "unnamedplus"
 
 vim.diagnostic.config({
-    virtual_text = true,
-    signs = true,
-    underline = true,
-    update_in_insert = false,
-    severity_sort = true,
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = true,
+  severity_sort = true,
 })
