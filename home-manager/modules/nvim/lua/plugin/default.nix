@@ -151,6 +151,7 @@
     jdt-language-server
     lua-language-server
     marksman
+    matlab-language-server
     nixd
     pyright
     rust-analyzer
