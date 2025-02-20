@@ -141,7 +141,7 @@
       };
 
       "$mainMod" = "SUPER";
-      "$monitor" = "$(hyprctl monitors | grep 'Monitor' | awk '{print $2}')";
+      "$monitor" = "$(hyprctl monitors | grep \"Monitor\" | awk '{print $2}')";
 
       bind =
         [
@@ -161,8 +161,8 @@
           "$mainMod, L, exec, spotify"
           "$mainMod, D, exec, webcord"
           "$mainMod, O, exec, obs"
-          "$mainMod SHIFT, S, exec, grim -g '$(slurp)' ~/Pictures/Screenshots/Screenshot_$(date+'%Y%m%d_%H%M%S').png"
-          "$mainMod, Print, exec, grim -o $monitor ~/Pictures/Screenshots/Screenshot_$(date+'%Y%m%d_%H%M%S').png"
+          "$mainMod SHIFT, Print, exec, grim -g \"$(slurp)\" ~/Pictures/Screenshots/Screenshot_$(date +'%Y%m%d_%H%M%S').png"
+          "$mainMod, Print, exec, grim -o $monitor ~/Pictures/Screenshots/Screenshot_$(date +'%Y%m%d_%H%M%S').png"
           ", Print, exec, grim -o $monitor - | wl-copy"
 
           # Move Focus
