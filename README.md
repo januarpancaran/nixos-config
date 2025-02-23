@@ -4,6 +4,24 @@ My NixOS and Home Manager configurations ft. Hyprland. This repo is my "nix vers
 
 ## Installation
 
+This dotfiles uses nixos-unstable channel, so if you haven't change your channel, be sure to do so by doing this:
+
+```shellSession
+# nix-channel --remove nixos
+# nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+# nix-channel --update
+```
+
+Also, if you haven't installed home manager, be sure to do so by doing this:
+
+```shellSession
+$ nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+$ nix-channel --update
+$ nix-shell '<home-manager>' -A install
+```
+
+Then, proceed with the installation:
+
 ```bash
 # Make a folder in your home folder
 mkdir -p $HOME/.config/nixos # Or any other places that you want
@@ -23,6 +41,8 @@ Before rebuilding your system and home manager, you need to change all user and 
 # Rebuild your system configuration
 cd $HOME/.config/nixos/system
 sudo nixos-rebuild switch --flake .
+# or if you just changed the channel to unstable
+sudo nixos-rebuild switch --flake . --upgrade
 
 # Rebuild your home manager configuration
 cd $HOME/.config/nixos/home-manager
