@@ -1,7 +1,13 @@
 {pkgs, ...}: {
   nixpkgs.config.allowUnfree = true;
 
-  home.packages = with pkgs; [
+  home.packages = with pkgs; let
+    octaveCustom = octaveFull.override {
+      graphicsmagick = graphicsmagick.override {
+        quantumdepth = 32;
+      };
+    };
+  in [
     acpi
     bat
     blueberry
@@ -41,10 +47,24 @@
     go
     nodejs
     openjdk23
-    python314
     rustc
     texliveBasic
     typescript
+
+    (python313.withPackages (p:
+      with python313Packages; [
+        matplotlib
+        numpy
+        opencv
+        pandas
+        scikit-learn
+        seaborn
+      ]))
+
+    (octaveCustom.withPackages (p:
+      with pkgs.octavePackages; [
+        image
+      ]))
   ];
 
   programs.mpv = {

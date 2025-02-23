@@ -147,6 +147,7 @@
     clang-tools
     docker-compose-language-service
     dockerfile-language-server-nodejs
+    eslint
     gopls
     jdt-language-server
     lua-language-server
