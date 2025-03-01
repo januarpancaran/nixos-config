@@ -14,6 +14,5 @@
     ./udevRules.nix
     ./user.nix
     ./xdgPortal.nix
-    ./zram.nix
   ];
 }
