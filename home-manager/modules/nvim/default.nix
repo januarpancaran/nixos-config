@@ -1,14 +1,10 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./lua/plugin
   ];
 
   programs.neovim = {
-    package = inputs.neovim-nightly.packages.${pkgs.system}.default;
+    package = pkgs.neovim-unwrapped;
     enable = true;
 
     defaultEditor = true;

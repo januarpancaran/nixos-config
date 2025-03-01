@@ -10,10 +10,6 @@
     };
 
     # Neovim
-    neovim-nightly = {
-      url = "github:nix-community/neovim-nightly-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     none-ls-extras = {
       url = "github:nvimtools/none-ls-extras.nvim";
       flake = false;

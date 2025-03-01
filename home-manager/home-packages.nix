@@ -38,7 +38,7 @@
     webcord
     wget
     wl-clipboard
-    xwaylandvideobridge
+    kdePackages.xwaylandvideobridge
     yazi
     zoxide
     # Programming
