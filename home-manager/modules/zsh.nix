@@ -1,6 +1,8 @@
-{ pkgs, inputs, ... }:
-
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.zsh = {
     package = pkgs.zsh;
     enable = true;
@@ -35,6 +37,7 @@
       ls = "ls -a --color=yes";
       ll = "ls -l --color=yes";
       svim = "sudo nvim";
+      fzf = "fzf -m --preview='bat --color=always {}'";
       nfzf = "nvim $(fzf -m --preview='bat --color=always {}')";
       cat = "bat";
       grep = "grep --color=yes";
