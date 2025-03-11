@@ -8,14 +8,14 @@
     };
 
     iconTheme = {
-      package = pkgs.kanagawa-icon-theme;
-      name = "Kanagawa";
+      package = pkgs.nordic;
+      name = "Nordic-darker";
     };
 
     cursorTheme = {
-      package = pkgs.catppuccin-cursors.mochaMauve;
-      name = "catppuccin-mocha-mauve-cursors";
-      size = 16;
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Classic";
+      size = 24;
     };
 
     gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;

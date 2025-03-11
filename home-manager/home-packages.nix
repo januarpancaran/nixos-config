@@ -15,6 +15,7 @@
     curl
     dconf
     eog
+    foliate
     fzf
     glib
     gnome-control-center
@@ -40,6 +41,7 @@
     wl-clipboard
     kdePackages.xwaylandvideobridge
     yazi
+    zip
     zoxide
     # Programming
     cargo
