@@ -12,7 +12,6 @@
           "custom/power"
           "hyprland/workspaces"
           "hyprland/window"
-          "mpris"
         ];
         modules-center = ["clock"];
         modules-right = [
@@ -60,18 +59,6 @@
           icon-size = 20;
           rewrite = {
             "" = " hyprland";
-          };
-        };
-
-        "mpris" = {
-          format = "{player_icon} {title} - {artist}";
-          format-paused = "{status_icon} {title} - {artist}";
-          max-length = 30;
-          player-icons = {
-            "default" = "▶";
-          };
-          status-icons = {
-            "paused" = "⏸";
           };
         };
 
