@@ -1,8 +1,8 @@
 {
   environment.sessionVariables = {
     EDITOR = "nvim";
+    XCURSOR_THEME = "Bibata-Modern-Classic";
     XCURSOR_SIZE = 24;
-    HYPRCURSOR_SIZE = 24;
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_SESSION_DEKSTOP = "Hyprland";
     XDG_SESSION_TYPE = "wayland";
@@ -13,5 +13,5 @@
     NIXOS_OZONE_WL = 1;
   };
 
-  environment.pathsToLink = [ "/share/zsh" ];
+  environment.pathsToLink = ["/share/zsh"];
 }
