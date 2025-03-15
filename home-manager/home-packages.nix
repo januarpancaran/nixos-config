@@ -24,7 +24,6 @@
     jq
     killall
     nautilus
-    networkmanagerapplet
     obs-studio
     papirus-icon-theme
     playerctl

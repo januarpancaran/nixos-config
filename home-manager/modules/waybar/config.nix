@@ -111,7 +111,7 @@
           tooltip-format = "{essid}";
           format-linked = "{ifname} (No IP) 󰈀";
           format-disconnected = "Disconnected ⚠";
-          on-click = "nm-connection-editor";
+          on-click = "ghostty -e nmtui";
           min-length = 2;
         };
 
