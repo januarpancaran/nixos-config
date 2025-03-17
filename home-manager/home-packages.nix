@@ -21,11 +21,11 @@
     gnome-control-center
     grim
     htop
-    jq
-    killall
+    kdePackages.xwaylandvideobridge
     nautilus
     obs-studio
     papirus-icon-theme
+    pavucontrol
     playerctl
     polkit_gnome
     ripgrep
@@ -38,7 +38,6 @@
     webcord
     wget
     wl-clipboard
-    kdePackages.xwaylandvideobridge
     yazi
     zip
     zoxide
