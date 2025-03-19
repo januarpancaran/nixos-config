@@ -9,8 +9,8 @@ in {
 
       search = {
         force = true;
-        default = "Google";
-        order = ["Google" "DuckDuckGo"];
+        default = "google";
+        order = ["google" "ddg"];
       };
     };
   };
