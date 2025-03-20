@@ -32,7 +32,7 @@
     modesetting.enable = true;
     powerManagement = {
       enable = true;
-      finegrained = false;
+      finegrained = true;
     };
 
     open = true;
