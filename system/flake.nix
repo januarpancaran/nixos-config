@@ -10,21 +10,23 @@
     };
   };
 
-  outputs = { self, nixpkgs, auto-cpufreq, ... }@inputs: 
-    let
-      host = "nixos-daangsangu";
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
-        inherit system;
+  outputs = {
+    nixpkgs,
+    auto-cpufreq,
+    ...
+  } @ inputs: let
+    host = "nixos-daangsangu";
+    system = "x86_64-linux";
+  in {
+    nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
+      inherit system;
 
-        specialArgs = { inherit inputs; };
+      specialArgs = {inherit inputs;};
 
-        modules = [
-          ./configuration.nix
-          auto-cpufreq.nixosModules.default
-        ];
-      };
+      modules = [
+        ./configuration.nix
+        auto-cpufreq.nixosModules.default
+      ];
     };
+  };
 }

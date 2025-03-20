@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   programs.tmux = {
     package = pkgs.tmux;
     enable = true;
@@ -26,7 +24,7 @@
       set -g status-right-length 100
       set -g status-left-length 100
       set -g status-left ""
-    ''; 
+    '';
 
     plugins = with pkgs.tmuxPlugins; [
       sensible

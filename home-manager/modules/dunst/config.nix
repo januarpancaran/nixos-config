@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   home.file.".config/dunst/assets" = {
     source = ./assets;
     recursive = true;
@@ -28,7 +26,7 @@
         progress_bar_max_width = 400;
         progress_bar_corner_radius = 0;
         progress_bar_corners = "all";
-        
+
         icon_corner_radius = 0;
         icon_corners = "all";
         indicate_hidden = "yes";
@@ -80,11 +78,11 @@
 
         corner_radius = 12;
         corners = "all";
-        
+
         ignore_dbusclose = false;
         force_xwayland = false;
         force_xinerama = false;
-        
+
         mouse_left_click = "close_current";
         mouse_middle_click = "do_action, close_current";
         mouse_right_click = "close_all";

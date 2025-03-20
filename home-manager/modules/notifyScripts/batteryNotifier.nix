@@ -28,8 +28,7 @@ let
       touch $EMPTY_FILE
     fi
   '';
-in 
-{
+in {
   home.file.".local/bin/batterynotify" = {
     text = batteryNotifier;
     executable = true;

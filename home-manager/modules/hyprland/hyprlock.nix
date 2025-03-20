@@ -1,6 +1,4 @@
-{pkgs, ...}: 
-
-{
+{pkgs, ...}: {
   programs.hyprlock = {
     package = pkgs.hyprlock;
     enable = true;

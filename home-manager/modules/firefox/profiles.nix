@@ -1,10 +1,10 @@
-let
-  user = "yuhshi";
-in {
-  programs.firefox.profiles = {
+{
+  programs.firefox.profiles = let
+    user = "yuhshi";
+  in {
     ${user} = {
       id = 0;
-      name = "${user}";
+      name = user;
       isDefault = true;
 
       search = {

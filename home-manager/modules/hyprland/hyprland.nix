@@ -5,7 +5,10 @@
     xwayland.enable = true;
 
     settings = {
-      monitor = ", preferred, auto, 1.25";
+      monitor = [
+        "eDP-1, preferred, auto, 1.25"
+        ", preferred, auto, 1.25, mirror, eDP-1"
+      ];
 
       "$terminal" = "ghostty";
       "$fileManager" = "nautilus";

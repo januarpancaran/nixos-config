@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
   imports = [
     ./home-packages.nix
@@ -8,7 +6,7 @@
 
   home.username = "yuhshi";
   home.homeDirectory = "/home/yuhshi";
-  home.stateVersion = "24.11"; 
+  home.stateVersion = "24.11";
 
   home.sessionVariables = {
     EDITOR = "nvim";
