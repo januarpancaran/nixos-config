@@ -14,6 +14,7 @@
     brightnessctl
     curl
     dconf
+    discord
     eog
     foliate
     fzf
@@ -22,6 +23,7 @@
     grim
     htop
     kdePackages.xwaylandvideobridge
+    mpv
     nautilus
     obs-studio
     papirus-icon-theme
@@ -35,24 +37,24 @@
     telegram-desktop
     unrar
     unzip
-    webcord
     wget
     wl-clipboard
     yazi
     zip
     zoxide
+
     # Programming
     cargo
     clang
     go
     nodejs
-    openjdk23
+    openjdk
     rustc
     texliveBasic
     typescript
 
-    (python313.withPackages (p:
-      with python313Packages; [
+    (python3.withPackages (p:
+      with python3Packages; [
         matplotlib
         numpy
         opencv
@@ -66,9 +68,4 @@
         image
       ]))
   ];
-
-  programs.mpv = {
-    package = pkgs.mpv;
-    enable = true;
-  };
 }
