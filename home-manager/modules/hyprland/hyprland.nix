@@ -6,7 +6,7 @@
 
     settings = {
       monitor = [
-        ", preferred, auto, 1.25"
+        ", preferred, auto, 1"
       ];
 
       "$terminal" = "ghostty";
