@@ -33,7 +33,6 @@
     ripgrep
     slurp
     spotify
-    swww
     telegram-desktop
     unrar
     unzip

@@ -17,7 +17,7 @@
       exec-once = [
         "waybar"
         "dunst"
-        "swww-daemon"
+        "hyprpaper"
         "hypridle"
         "systemctl start --user polkit-gnome-authentication-agent-1.service"
       ];

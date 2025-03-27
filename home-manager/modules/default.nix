@@ -5,7 +5,7 @@
     ./firefox
     ./ghostty.nix
     ./git.nix
-    ./hyprland
+    ./hypr
     ./notifyScripts
     ./nvim
     ./rofi.nix
