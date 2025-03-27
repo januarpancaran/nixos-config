@@ -187,7 +187,6 @@
       go-tools
       asmfmt
       golangci-lint
-      golangci-lint-langserver
       golines
       gofumpt
 
