@@ -6,8 +6,7 @@
 
     settings = {
       monitor = [
-        "eDP-1, preferred, auto, 1.25"
-        ", preferred, auto, 1.25, mirror, eDP-1"
+        ", preferred, auto, 1.25"
       ];
 
       "$terminal" = "ghostty";
