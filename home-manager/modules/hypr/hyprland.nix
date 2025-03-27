@@ -73,7 +73,7 @@
       };
 
       animations = {
-        enabled = "yes, please :)";
+        enabled = true;
 
         bezier = [
           "easeOutQuint, 0.23, 1, 0.32, 1"
@@ -164,9 +164,10 @@
           "$mainMod, L, exec, spotify"
           "$mainMod, D, exec, discord"
           "$mainMod, O, exec, obs"
-          "$mainMod SHIFT, Print, exec, grim -g \"$(slurp)\" ~/Pictures/Screenshots/Screenshot_$(date +'%Y%m%d_%H%M%S').png"
-          "$mainMod, Print, exec, grim -o $monitor ~/Pictures/Screenshots/Screenshot_$(date +'%Y%m%d_%H%M%S').png"
-          ", Print, exec, grim -o $monitor - | wl-copy"
+          "$mainMod SHIFT, S, exec, hyprshot -m region -o ~/Pictures/Screenshots/ -f Screenshot_$(date +'%Y%m%d_%H%M%S').png -t 2000"
+          "$mainMod, Print, exec, hyprshot -m window -m active -o ~/Pictures/Screenshots/ -f Screenshot_$(date +'%Y%m%d_%H%M%S').png -t 2000"
+          ", Print, exec, hyprshot -m window -m active -t 2000 --clipboard-only"
+          "SHIFT, Print, exec, hyprshot -m output -m active -o ~/Pictures/Screenshots/ -f Screenshot_$(date +'%Y%m%d_%H%M%S').png -t 2000"
 
           # Move Focus
           "$mainMod, left, movefocus, l"
@@ -176,7 +177,6 @@
 
           # Special Workspaces
           "$mainMod, S, togglespecialworkspace, magic"
-          "$mainMod SHIFT, S, movetoworkspace, special:magic"
 
           # Scroll Workspaces
           "$mainMod, mouse_down, workspace, e+1"

@@ -20,8 +20,8 @@
     fzf
     glib
     gnome-control-center
-    grim
     htop
+    hyprshot
     kdePackages.xwaylandvideobridge
     mpv
     nautilus
@@ -31,7 +31,6 @@
     playerctl
     polkit_gnome
     ripgrep
-    slurp
     spotify
     telegram-desktop
     unrar
