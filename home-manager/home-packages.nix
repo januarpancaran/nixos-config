@@ -10,6 +10,7 @@
     dconf
     discord
     eog
+    evince
     foliate
     fzf
     glib
