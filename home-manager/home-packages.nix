@@ -1,13 +1,7 @@
 {pkgs, ...}: {
   nixpkgs.config.allowUnfree = true;
 
-  home.packages = with pkgs; let
-    octaveCustom = octaveFull.override {
-      graphicsmagick = graphicsmagick.override {
-        quantumdepth = 32;
-      };
-    };
-  in [
+  home.packages = with pkgs; [
     acpi
     bat
     blueberry
@@ -61,7 +55,7 @@
         seaborn
       ]))
 
-    (octaveCustom.withPackages (p:
+    (octaveFull.withPackages (p:
       with pkgs.octavePackages; [
         image
       ]))
