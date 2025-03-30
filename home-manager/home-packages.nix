@@ -37,7 +37,7 @@
 
     # Programming
     cargo
-    clang
+    gcc
     go
     nodejs
     openjdk
