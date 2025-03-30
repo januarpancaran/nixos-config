@@ -11,7 +11,7 @@ let
 
     case $1 in
     up)
-      wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
+      wpctl set-volume -l 2 @DEFAULT_AUDIO_SINK@ 5%+
       send_notification "$ICON_DIR/volume-change.png"
       ;;
     down)
@@ -28,8 +28,7 @@ let
       ;;
     esac
   '';
-in
-{
+in {
   home.file.".local/bin/volumenotify" = {
     text = volumeNotifier;
     executable = true;
