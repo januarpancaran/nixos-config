@@ -18,6 +18,7 @@
     htop
     hyprshot
     kdePackages.xwaylandvideobridge
+    libreoffice
     mpv
     nautilus
     obs-studio
@@ -34,12 +35,15 @@
     wl-clipboard
     yazi
     zip
+    zotero
     zoxide
 
     # Programming
     cargo
     gcc
     go
+    gradle
+    maven
     nodejs
     openjdk
     rustc
