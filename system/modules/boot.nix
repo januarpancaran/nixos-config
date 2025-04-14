@@ -21,7 +21,7 @@
       timeout = 5;
     };
 
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_zen;
     kernelParams = ["quiet" "acpi_backlight=native" "i915.force_probe=46a6" "mem_sleep_default=s2idle" "modprobe.blacklist=iTCO_wdt"];
 
     initrd.kernelModules = ["i915" "nvidia" "nvidia_modeset" "nvidia_drm" "nvidia_uvm"];
