@@ -8,6 +8,7 @@
     ./firmware.nix
     ./fonts.nix
     ./graphics.nix
+    ./mysql.nix
     ./nixSettings.nix
     ./sound.nix
     ./systemdServices.nix
