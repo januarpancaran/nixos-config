@@ -17,10 +17,13 @@
     gnome-control-center
     htop
     hyprshot
+    insomnia
     kdePackages.xwaylandvideobridge
     libreoffice
     mpv
+    mysql_jdbc
     nautilus
+    netbeans
     obs-studio
     papirus-icon-theme
     pavucontrol
@@ -56,6 +59,7 @@
         numpy
         opencv
         pandas
+        pip
         scikit-learn
         seaborn
       ]))
