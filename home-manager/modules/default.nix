@@ -14,7 +14,6 @@
     ./systemdTimers.nix
     ./theme.nix
     ./tmux.nix
-    ./vscode.nix
     ./waybar
     ./wlogout
     ./zsh.nix

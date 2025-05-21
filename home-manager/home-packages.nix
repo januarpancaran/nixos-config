@@ -52,6 +52,7 @@
     rustc
     texliveBasic
     typescript
+    vscode
 
     (python3.withPackages (p:
       with python3Packages; [
