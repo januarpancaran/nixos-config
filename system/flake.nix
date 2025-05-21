@@ -15,7 +15,7 @@
     auto-cpufreq,
     ...
   } @ inputs: let
-    host = "nixos-daangsangu";
+    host = "daangsangu";
     system = "x86_64-linux";
   in {
     nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {

@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  host = "nixos-daangsangu";
+  host = "daangsangu";
 in {
   imports = [
     ./hardware-configuration.nix
