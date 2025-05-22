@@ -155,7 +155,6 @@
           "$mainMod, V, togglefloating"
           "$mainMod, R, exec, $menu -show drun"
           "Alt, Tab, exec, $menu -show window"
-          "$mainMod, P, pseudo"
           "$mainMod, J, togglesplit"
           "$mainMod, F, fullscreen"
           "$mainMod, B, exec, $browser"
