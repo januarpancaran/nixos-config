@@ -167,9 +167,9 @@
           "$mainMod, O, exec, obs"
           "$mainMod, L, exec, wlogout"
           "$mainMod SHIFT, S, exec, hyprshot -m region -o ~/Pictures/Screenshots/ -f Screenshot_$(date +'%Y%m%d_%H%M%S').png -t 2000"
-          "$mainMod, Print, exec, hyprshot -m window -m active -o ~/Pictures/Screenshots/ -f Screenshot_$(date +'%Y%m%d_%H%M%S').png -t 2000"
+          "$mainMod, P, exec, hyprshot -m window -m active -o ~/Pictures/Screenshots/ -f Screenshot_$(date +'%Y%m%d_%H%M%S').png -t 2000"
           ", Print, exec, hyprshot -m window -m active -t 2000 --clipboard-only"
-          "SHIFT, Print, exec, hyprshot -m output -m active -o ~/Pictures/Screenshots/ -f Screenshot_$(date +'%Y%m%d_%H%M%S').png -t 2000"
+          "$mainMod SHIFT, P, exec, hyprshot -m output -m active -o ~/Pictures/Screenshots/ -f Screenshot_$(date +'%Y%m%d_%H%M%S').png -t 2000"
 
           # Move Focus
           "$mainMod, left, movefocus, l"
