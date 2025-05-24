@@ -12,18 +12,17 @@ let
     }
 
     case $1 in
-    up) 
+    up)
       brightnessctl set +5%
       send_notification
       ;;
     down)
-      brightnessctl set 5%-
+      brightnessctl set 5%- --min-value=1
       send_notification
       ;;
     esac
   '';
-in
-{
+in {
   home.file.".local/bin/brightnessnotify" = {
     text = brightnessNotifier;
     executable = true;
