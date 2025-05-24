@@ -12,7 +12,7 @@
       "$terminal" = "ghostty";
       "$fileManager" = "nautilus";
       "$menu" = "rofi";
-      "$browser" = "firefox";
+      "$browser" = "chromium";
 
       exec-once = [
         "waybar"
@@ -158,7 +158,7 @@
           "$mainMod, J, togglesplit"
           "$mainMod, F, fullscreen"
           "$mainMod, B, exec, $browser"
-          "$mainMod, I, exec, $browser --private-window"
+          "$mainMod, I, exec, $browser --incognito"
           "$mainMod SHIFT, C, exec, env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
           "$mainMod, SemiColon, exec, spotify"
           "$mainMod, C, exec, code"

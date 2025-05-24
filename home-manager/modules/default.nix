@@ -1,5 +1,6 @@
 {
   imports = [
+    ./chromium.nix
     ./dunst
     ./fastfetch.nix
     ./firefox
