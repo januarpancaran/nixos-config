@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   programs.chromium = {
-    package = pkgs.chromium.override {enableWideVine = true;};
+    package = pkgs.chromium.override {
+      enableWideVine = true;
+      proprietaryCodecs = true;
+    };
     enable = true;
 
     commandLineArgs = [

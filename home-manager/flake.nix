@@ -29,7 +29,10 @@
   } @ inputs: let
     user = "yuhshi";
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
   in {
     homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
