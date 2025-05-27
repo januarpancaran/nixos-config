@@ -53,7 +53,7 @@
     vscode
 
     (python3.withPackages (p:
-      with python3Packages; [
+      with pkgs.python3Packages; [
         matplotlib
         numpy
         opencv
