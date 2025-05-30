@@ -52,15 +52,18 @@
     typescript
     vscode
 
-    (python3.withPackages (p:
-      with pkgs.python3Packages; [
+    (python312.withPackages (p:
+      with pkgs.python312Packages; [
+        black
+        isort
         matplotlib
         numpy
-        opencv
+        opencv4
         pandas
-        pip
+        pylint
         scikit-learn
         seaborn
+        streamlit
       ]))
 
     (octaveFull.withPackages (p:
