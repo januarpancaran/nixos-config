@@ -9,14 +9,13 @@
     extraPackages = with pkgs; [
       intel-compute-runtime
       intel-media-driver
-      intel-vaapi-driver
       libvdpau-va-gl
       mkl
       vpl-gpu-rt
     ];
-
-    extraPackages32 = [pkgs.pkgsi686Linux."intel-vaapi-driver"];
   };
+
+  environment.sessionVariables = {LIBVA_DRIVER_NAME = "iHD";};
 
   nixpkgs.config.packageOverrides = pkgs: {
     intel-vaapi-driver = pkgs.intel-vaapi-driver.override {enableHybridCodec = true;};
