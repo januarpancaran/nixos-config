@@ -7,6 +7,7 @@
     ./ghostty.nix
     ./git.nix
     ./hypr
+    ./mpv.nix
     ./notifyScripts
     ./nvim
     ./rofi.nix

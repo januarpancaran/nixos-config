@@ -18,7 +18,6 @@
     insomnia
     kdePackages.xwaylandvideobridge
     libreoffice
-    mpv
     mysql_jdbc
     nautilus
     netbeans
@@ -30,6 +29,7 @@
     ripgrep
     spotify
     telegram-desktop
+    tree
     unrar
     unzip
     wget
