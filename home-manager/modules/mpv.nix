@@ -8,6 +8,7 @@
       vo = "gpu";
       profile = "gpu-hq";
       gpu-context = "wayland";
+      save-position-on-quit = "yes";
     };
   };
 }
