@@ -211,5 +211,12 @@
       # Docker
       hadolint
     ];
+
+    extraPython3Packages = ps:
+      with ps; [
+        black
+        isort
+        ruff
+      ];
   };
 }

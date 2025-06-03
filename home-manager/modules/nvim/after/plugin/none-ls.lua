@@ -50,8 +50,8 @@ null_ls.setup({
 
     -- Python
     null_ls.builtins.formatting.isort,
+    null_ls.builtins.formatting.black,
     require("none-ls.diagnostics.ruff"),
-    require("none-ls.formatting.ruff"),
 
     -- Java
     null_ls.builtins.formatting.google_java_format,

@@ -52,8 +52,9 @@
     typescript
     vscode
 
-    (python312.withPackages (p:
-      with pkgs.python312Packages; [
+    (python312.withPackages (ps:
+      with ps; [
+        black
         isort
         matplotlib
         numpy
@@ -65,8 +66,8 @@
         streamlit
       ]))
 
-    (octaveFull.withPackages (p:
-      with pkgs.octavePackages; [
+    (octaveFull.withPackages (ps:
+      with ps; [
         image
       ]))
   ];
