@@ -195,7 +195,6 @@
       cppcheck
 
       # Python
-      isort
       ruff
 
       # Nix
@@ -214,8 +213,6 @@
 
     extraPython3Packages = ps:
       with ps; [
-        black
-        isort
         ruff
       ];
   };

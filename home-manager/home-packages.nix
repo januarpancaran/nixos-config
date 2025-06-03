@@ -54,8 +54,6 @@
 
     (python312.withPackages (ps:
       with ps; [
-        black
-        isort
         matplotlib
         numpy
         opencv4
