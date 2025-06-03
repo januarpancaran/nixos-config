@@ -54,13 +54,12 @@
 
     (python312.withPackages (p:
       with pkgs.python312Packages; [
-        black
         isort
         matplotlib
         numpy
         opencv4
         pandas
-        pylint
+        ruff
         scikit-learn
         seaborn
         streamlit

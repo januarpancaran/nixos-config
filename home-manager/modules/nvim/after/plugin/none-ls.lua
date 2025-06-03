@@ -49,9 +49,9 @@ null_ls.setup({
     null_ls.builtins.formatting.clang_format,
 
     -- Python
-    null_ls.builtins.diagnostics.pylint,
-    null_ls.builtins.formatting.black,
     null_ls.builtins.formatting.isort,
+    require("none-ls.diagnostics.ruff"),
+    require("none-ls.formatting.ruff"),
 
     -- Java
     null_ls.builtins.formatting.google_java_format,

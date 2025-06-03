@@ -195,9 +195,8 @@
       cppcheck
 
       # Python
-      pylint
-      black
       isort
+      ruff
 
       # Nix
       alejandra
