@@ -29,7 +29,7 @@ mkdir -p $HOME/.config/nixos # Or any other places that you want
 # Clone this repo
 git clone --depth 1 https://github.com/januarpancaran/nixos-config.git
 cd nixos-config
-cp -r {system,home-manager} $HOME/.config/nixos
+cp -r {system,home-manager,flake.nix} $HOME/.config/nixos
 
 # Copy your hardware configuration
 cp /etc/nixos/hardware-configuration.nix $HOME/.config/nixos/system
@@ -38,13 +38,8 @@ cp /etc/nixos/hardware-configuration.nix $HOME/.config/nixos/system
 Before rebuilding your system and home manager, you need to change all user and hostname variables in this configuration. Also, feel free to change the packages before rebuilding in case you don't want programs that i use.
 
 ```bash
-# Rebuild your system configuration
-cd $HOME/.config/nixos/system
-sudo nixos-rebuild switch --flake .
-# or if you just changed the channel to unstable
-sudo nixos-rebuild switch --flake . --upgrade
-
-# Rebuild your home manager configuration
-cd $HOME/.config/nixos/home-manager
-home-manager switch --flake .
+# Rebuild your system and home-manager configuration
+cd $HOME/.config/nixos
+nh os switch .
+nh home switch .
 ```
