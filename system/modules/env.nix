@@ -1,5 +1,8 @@
 {
-  environment.sessionVariables = {
+  environment.sessionVariables = let
+    user = "yuhshi";
+    configDir = "/home/${user}/.config";
+  in {
     EDITOR = "nvim";
     XCURSOR_THEME = "Bibata-Modern-Classic";
     XCURSOR_SIZE = 24;
@@ -11,6 +14,7 @@
     GDK_BACKEND = "wayland, x11, *";
     ELECTRON_OZONE_PLATFORM_THEME = "wayland";
     NIXOS_OZONE_WL = 1;
+    FLAKE = "${configDir}/nixos";
   };
 
   environment.pathsToLink = ["/share/zsh"];
