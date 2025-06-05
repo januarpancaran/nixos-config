@@ -1,9 +1,16 @@
 {
-  description = "Home Manager Flake";
+  description = "OS and home-manager flake";
 
   inputs = {
+    # OS
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    auto-cpufreq = {
+      url = "github:AdnanHodzic/auto-cpufreq";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Home Manager
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,10 +30,13 @@
   };
 
   outputs = {
+    self,
     nixpkgs,
+    auto-cpufreq,
     home-manager,
     ...
   } @ inputs: let
+    host = "daangsangu";
     user = "yuhshi";
     system = "x86_64-linux";
     pkgs = import nixpkgs {
@@ -34,12 +44,21 @@
       config.allowUnfree = true;
     };
   in {
+    nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
+      inherit system;
+
+      specialArgs = {inherit inputs;};
+
+      modules = [
+        ./system/configuration.nix
+        auto-cpufreq.nixosModules.default
+      ];
+    };
+
     homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
 
-      modules = [
-        ./home.nix
-      ];
+      modules = [./home-manager/home.nix];
 
       extraSpecialArgs = {inherit inputs;};
     };
