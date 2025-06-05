@@ -9,6 +9,7 @@
     ./fonts.nix
     ./graphics.nix
     ./mysql.nix
+    ./nh.nix
     ./nixSettings.nix
     ./sound.nix
     ./systemdServices.nix
