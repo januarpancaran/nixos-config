@@ -40,6 +40,19 @@ Before rebuilding your system and home manager, you need to change all user and 
 ```bash
 # Rebuild your system and home-manager configuration
 cd $HOME/.config/nixos
-nh os switch .
-nh home switch .
+# System
+sudo nixos-rebuild switch --flake . --upgrade --verbose
+
+# Home manager
+home-manager switch --flake . --verbose
+```
+
+After rebuilding for the first time, you can use "nh" to rebuild your system and home-manager
+
+```bash
+# System
+nh os switch
+
+# Home manager
+nh home switch
 ```
