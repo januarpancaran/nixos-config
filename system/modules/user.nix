@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  user = "yuhshi";
+  user = "daangsangu";
 in {
   users = {
     users.${user} = {

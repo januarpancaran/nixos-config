@@ -36,8 +36,8 @@
     home-manager,
     ...
   } @ inputs: let
-    host = "daangsangu";
-    user = "yuhshi";
+    host = "hayudaang";
+    user = "daangsangu";
     system = "x86_64-linux";
     pkgs = import nixpkgs {
       inherit system;

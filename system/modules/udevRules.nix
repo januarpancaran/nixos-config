@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  user = "yuhshi";
+  user = "daangsangu";
   homeDir = "/home/${user}";
   script = "${homeDir}/.local/bin/chargingnotify";
   waylandDisplay = "wayland-0";

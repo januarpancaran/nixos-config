@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   programs.nh = let
-    user = "yuhshi";
+    user = "daangsangu";
     configDir = "/home/${user}/.config";
   in {
     package = pkgs.nh;

@@ -4,8 +4,8 @@
     ./modules
   ];
 
-  home.username = "yuhshi";
-  home.homeDirectory = "/home/yuhshi";
+  home.username = "daangsangu";
+  home.homeDirectory = "/home/daangsangu";
   home.stateVersion = "24.11";
 
   home.sessionVariables = {

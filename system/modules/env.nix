@@ -1,6 +1,6 @@
 {
   environment.sessionVariables = let
-    user = "yuhshi";
+    user = "daangsangu";
     configDir = "/home/${user}/.config";
   in {
     EDITOR = "nvim";

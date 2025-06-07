@@ -1,6 +1,6 @@
 {
   programs.firefox.profiles = let
-    user = "yuhshi";
+    user = "daangsangu";
   in {
     ${user} = {
       id = 0;
