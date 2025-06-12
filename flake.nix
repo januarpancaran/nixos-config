@@ -5,11 +5,6 @@
     # OS
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    auto-cpufreq = {
-      url = "github:AdnanHodzic/auto-cpufreq";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Home Manager
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -32,7 +27,6 @@
   outputs = {
     self,
     nixpkgs,
-    auto-cpufreq,
     home-manager,
     ...
   } @ inputs: let
@@ -51,7 +45,6 @@
 
       modules = [
         ./system/configuration.nix
-        auto-cpufreq.nixosModules.default
       ];
     };
 
