@@ -1,8 +1,7 @@
-{pkgs, ...}: {
+{
   services.power-profiles-daemon.enable = false;
 
   services.tlp = {
-    package = pkgs.tlp;
     enable = true;
 
     settings = {
