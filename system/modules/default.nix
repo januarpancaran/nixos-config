@@ -1,6 +1,5 @@
 {
   imports = [
-    ./autoCpuFreq.nix
     ./bluetooth.nix
     ./boot.nix
     ./docker.nix
@@ -13,6 +12,7 @@
     ./nixSettings.nix
     ./sound.nix
     ./systemdServices.nix
+    ./tlp.nix
     ./udevRules.nix
     ./user.nix
     ./xdgPortal.nix
