@@ -140,6 +140,21 @@
           vim.keymap.set("n", "<leader>ut", vim.cmd.UndotreeToggle)
         '';
       }
+
+      # Supermaven
+      {
+        plugin = supermaven-nvim;
+        type = "lua";
+        config = ''
+          require("supermaven-nvim").setup({
+            keymaps = {
+              accept_suggestion = "<C-f>",
+              clear_suggestion = "<C-]>",
+              accept_word = "<C-j>",
+            },
+          })
+        '';
+      }
     ];
 
     extraPackages = with pkgs; [
