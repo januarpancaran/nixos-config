@@ -1,9 +1,6 @@
 {pkgs, ...}: {
   programs.chromium = {
-    package = pkgs.chromium.override {
-      enableWideVine = true;
-      proprietaryCodecs = true;
-    };
+    package = pkgs.google-chrome;
     enable = true;
 
     commandLineArgs = [
@@ -11,17 +8,6 @@
       "--ignore-gpu-blocklist"
       "--enable-zero-copy"
       "--enable-hardware-overlays"
-    ];
-
-    extensions = [
-      # Ublock Origin Lite
-      "ddkjiahejlhfcafbddmgiahcphecmpfh"
-      # Catppuccin Mocha
-      "bkkmolkhemgaeaeggcmfbghljjjoofoh"
-      # Always Active Window
-      "ehllkhjndgnlokhomdlhgbineffifcbj"
-      # Zotero Connector
-      "ekhagklcjbdpajgpjgmbionohlpdbjgc"
     ];
   };
 }
