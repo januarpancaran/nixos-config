@@ -67,7 +67,7 @@
         config = ''
           require("lualine").setup({
             options = {
-              theme = "dracula",
+              theme = "kanagawa",
             }
           })
         '';
@@ -111,10 +111,10 @@
 
       # Theme
       {
-        plugin = catppuccin-nvim;
+        plugin = kanagawa-nvim;
         type = "lua";
         config = ''
-          vim.cmd.colorscheme("catppuccin-mocha")
+          vim.cmd.colorscheme("kanagawa-wave")
         '';
       }
 
