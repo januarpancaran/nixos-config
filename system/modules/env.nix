@@ -14,7 +14,7 @@
     GDK_BACKEND = "wayland, x11, *";
     ELECTRON_OZONE_PLATFORM_THEME = "wayland";
     NIXOS_OZONE_WL = 1;
-    FLAKE = "${configDir}/nixos";
+    NH_FLAKE = "${configDir}/nixos";
   };
 
   environment.pathsToLink = ["/share/zsh"];
