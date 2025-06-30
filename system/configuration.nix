@@ -32,6 +32,12 @@ in {
     trash-cli
   ];
 
+  services.btrfs.autoScrub = {
+    enable = true;
+    interval = "weekly";
+    fileSystems = ["/" "/home"];
+  };
+
   services.openssh.enable = true;
   networking.firewall.enable = true;
   security.apparmor.enable = true;
