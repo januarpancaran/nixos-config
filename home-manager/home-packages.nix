@@ -6,6 +6,7 @@
     brightnessctl
     curl
     dconf
+    devbox
     discord
     eog
     evince
