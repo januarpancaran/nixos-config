@@ -4,7 +4,8 @@ in {
   users = {
     users.${user} = {
       isNormalUser = true;
-      extraGroups = ["wheel" "video" "audio" "networkmanager" "docker"];
+      extraGroups = ["wheel" "video" "audio" "networkmanager"];
+      trustedUsers = ["root" "@wheel"];
     };
 
     defaultUserShell = pkgs.zsh;
