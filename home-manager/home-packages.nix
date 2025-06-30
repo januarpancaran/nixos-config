@@ -38,35 +38,5 @@
     zip
     zotero
     zoxide
-
-    # Programming
-    cargo
-    gcc
-    go
-    gradle
-    maven
-    nodejs
-    openjdk
-    rustc
-    texliveBasic
-    typescript
-    vscode
-
-    (python312.withPackages (ps:
-      with ps; [
-        matplotlib
-        numpy
-        opencv4
-        pandas
-        ruff
-        scikit-learn
-        seaborn
-        streamlit
-      ]))
-
-    (octaveFull.withPackages (ps:
-      with ps; [
-        image
-      ]))
   ];
 }
