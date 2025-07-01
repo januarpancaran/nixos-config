@@ -33,6 +33,7 @@
     tree
     unrar
     unzip
+    vscode
     wget
     wl-clipboard
     yazi
