@@ -8,8 +8,8 @@
     };
 
     iconTheme = {
-      package = pkgs.nordic;
-      name = "Nordic-darker";
+      package = pkgs.tela-icon-theme;
+      name = "Tela-nord-dark";
     };
 
     cursorTheme = {

@@ -12,7 +12,7 @@
       display-drun = "Applications:";
       display-window = "Windows:";
       show-icons = true;
-      icon-theme = "Papirus";
+      icon-theme = "Tela-nord-dark";
       drun-display-format = "{icon} {name}";
       font = "JetBrainsMono NF Medium 10";
     };
