@@ -155,6 +155,17 @@
           })
         '';
       }
+
+      # Render Markdown
+      {
+        plugin = render-markdown-nvim;
+        type = "lua";
+        config = ''
+          require("render-markdown").setup({
+            completions = { lsp = { enabled = true } },
+          })
+        '';
+      }
     ];
 
     extraPackages = with pkgs; [

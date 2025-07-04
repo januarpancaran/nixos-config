@@ -8,6 +8,7 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "supermaven" },
+    { name = "render-markdown" },
   }, { { name = "buffer" } }),
 
   snippet = {
