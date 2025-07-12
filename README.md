@@ -2,6 +2,42 @@
 
 My NixOS and Home Manager configurations ft. Hyprland. This repo is my "nix version" of my dotfiles repo [here](https://github.com/januarpancaran/dotfiles)
 
+![megaphone](screenshot.png)
+
+## Defaults
+
+| Variable            | Default               |
+| :------------------ | :-------------------- |
+| Desktop Environment | Hyprland              |
+| Bar                 | Waybar                |
+| Notification Daemon | Dunst                 |
+| Shell               | Zsh                   |
+| Text Editor         | Neovim + VsCode       |
+| Gtk Theme           | Dracula               |
+| GTK Icon Theme      | Tela-nord-dark        |
+| Cursor              | Bibata-Modern-Classic |
+| Terminal            | Ghostty               |
+| Browser             | Google Chrome         |
+| File Manager        | Nautilus              |
+| App Launcher        | Rofi                  |
+| Logout              | Wlogout               |
+| Screenshot          | Hyprshot              |
+
+## Main Keybindings
+
+| App                 | Keybinding        |
+| :------------------ | :---------------- |
+| Terminal            | Super + T         |
+| Kill Active         | Super + Q         |
+| Browser             | Super + B         |
+| App Launcher        | Super + R         |
+| File Manager        | Super + E         |
+| Text Editor         | Super + C         |
+| Logout              | Super + L         |
+| Screenshot (Window) | Super + P         |
+| Screenshot (Area)   | Super + Shift + S |
+| Screenshot (Full)   | Super + Shift + P |
+
 ## Installation
 
 This dotfiles uses nixos-unstable channel, so if you haven't change your channel, be sure to do so by doing this:
