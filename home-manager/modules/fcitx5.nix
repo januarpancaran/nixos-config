@@ -17,6 +17,19 @@
             "Hotkey/TriggerKeys"."0" = "Control+backslash";
           };
 
+          inputMethod = {
+            "Groups/0" = {
+              Name = "Default";
+              "Default Layout" = "us";
+              DefaultIM = "pinyin";
+            };
+
+            "Groups/0/Items/0".Name = "keyboard-us";
+            "Groups/0/Items/1".Name = "pinyin";
+
+            GroupOrder."0" = "Default";
+          };
+
           addons = {
             classicui.globalSection = {
               Theme = "Nord-Dark";
