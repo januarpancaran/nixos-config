@@ -3,6 +3,7 @@
     ./chromium.nix
     ./dunst
     ./fastfetch.nix
+    ./fcitx5.nix
     ./firefox
     ./ghostty.nix
     ./git.nix

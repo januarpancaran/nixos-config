@@ -19,6 +19,8 @@
         "dunst"
         "hyprpaper"
         "hypridle"
+        "fcitx5 -d -r"
+        "fcitx5-remote -r"
         "systemctl start --user polkit-gnome-authentication-agent-1.service"
       ];
 
