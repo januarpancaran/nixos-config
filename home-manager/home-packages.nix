@@ -23,7 +23,6 @@
     nautilus
     netbeans
     obs-studio
-    papirus-icon-theme
     pavucontrol
     playerctl
     polkit_gnome
